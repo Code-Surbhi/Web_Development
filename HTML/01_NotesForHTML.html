@@ -1,0 +1,401 @@
+<!-- Web Development - building websites for the internet -->
+<!-- Internet - Interconnected network of computers all around the world -->
+
+<!-- 
+    First we request for the IP address and then for the home page 
+    The request for the IP address is made to the DNS Server Via ISP
+    Then on obtaining the IP address, a request for the homepage is made from the particular site server
+-->
+
+<!-- 
+    Server - 24/7 Online gives answers to requests (IP)
+    Clients - the part which gives requests to access the data (IP)
+    (IP - always unique)
+
+    Client -> ISP (Internet service provider) -> DNS Server(Domain Name System)
+
+    DNS -> saare domain names ka IP address store hota hai -> (e.g. Google.com IP , Amazon.in IP)
+    DNS -> client ko bataata hai ki Google.com ka IP address kya hai
+    After recieving the IP address - it communicates directly to the server
+    Client -> Google.com IP address -> Google server -> data 
+-->
+
+<!-- 
+    1. We search a domain name in the search engine bar
+    2. It requests its server (Backend)
+    3. It gives the frontend of the website in the browser as a response (HTML , CSS , JS)
+-->
+
+<!-- 
+    Frontend - html , css , js , bootstrap , tailwind
+    Backend - express , NodeJs
+    Database - Sql , MongoDB
+    React
+-->
+
+<!-- HTML (Structure and Formatting) - HTML5 - usse hamara webpage bannta hai -->
+<!-- CSS (Style) - CSS3 - usse hamara webpage ka design bannta hai -->
+<!-- JS (Functionality) - JavaScript - usse hamara webpage ka functionality bannta hai -->
+
+<!-- 
+    HTML tags - Container for content or other tags
+
+    Eg. <p> CONTENT </p>
+    here <p> is an opening tag and </p> is a closing tag
+    and the whole "<p> CONTENT </p>" is an element
+
+    " " and ' ' is similar in HTML
+    html is not a case sensitive language
+-->
+
+<!DOCTYPE html> <!-- Ye btata hai ki hum Version 5 use kr rhe hai -->
+<html lang="en"> <!-- <html> is a root tag -->
+<!--lang="en" : here "lang" is an attribute and "en" ki value change ho sakti hai-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first page</title> <!-- Web page ke upar tag mai dikhta hai : jo info hume display nhi krani but honi chahiye => head tag mai rakhte hai also called as METADATA -->
+</head>
+<body>
+    <p>This is a parahgraph element</p>
+    <!-- Heading 1 to 6 : The size decreases -->
+    <h1>There are 6 levels of heading: Heading 1</h1> <!-- Heading 1: largest Heading-->
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6> <!--Heading 6: The smallest Heading-->
+
+    <p>
+        This is an example of Nested tags
+        <b>
+            Okay
+        </b>
+    </p>
+
+    <!-- Lists in HTML 
+     1. Ordered List (OL) - Numbered List
+     2. Unordered List (UL) - Bulleted List (It has diffrent types/Attributes)
+    -->
+
+    <ol type=""> <!--Write i/1/a in the double quotes-->
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <ul type=""> <!--Write Square in the double quotes-->
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+
+    <b>BOLD</b>
+    <i>Italics</i>
+    <u>Underline</u>
+
+    <!-- This is a break tag - used to break line -->
+    <br>
+
+    <!-- Anchor tags / Elements : add links to page  
+         href is hypertext referance 
+    -->
+    <a href="https://tetris.com/play-tetrismindbender">Tetris : Mindbender game</a>
+    <!-- Absolute links : jo jaise internet pe dikhta hai waise hi directly paste hojata hai 
+         Relative links : Usually hum files ke links paste krte hai (HOME: Home page pe lejayega)
+    -->
+
+    <br>
+
+    <!-- Image tag - (relative url)
+         ./ - stays in the same folder
+         ../ - goes out side the folder
+         
+         (absolute url) can also be used here - jo link internet pe display ho rha hai wo directly display kr sakte hai hum here
+
+        alt -> alternative : if website pe picture display nhi hui then uski jagah wo display hoga
+    -->
+    <img src="" alt="" height=" px" width=" px">
+    <img src="../Vangogh.jpg" alt="Starry Night by Vangogh using relative URL">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/640px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" alt="Starry Night by Vangogh using Absolute URL">
+
+    <!-- INLINE ELEMENTS : Takes only neccesary width , dont start from new line [o o o] 
+         e.g : Anchor tag , image
+    -->
+    <!-- BLOCK ELEMENTS : Takes full width available (full block) , start from new line 
+        [o]
+        [o]
+        [o]
+        e.g: heading element , paragraph
+    -->
+
+    <div>
+        <!-- Div Element : Content division element 
+        Container used to hold other Html elements / group them together
+        BLOCK ELEMENT
+        -->
+    </div>
+
+    <span>
+        <!-- Span Element : used to group elements together 
+        INLINE ELEMENT
+        -->
+    </span>
+
+    <!-- Horizontal rule : Draws a horizontal rule line -->
+    <hr>
+    
+    <p>a2=b2+c2</p>
+    <p>a<sup>2</sup>=b<sup>2</sup>+c<sup>2</sup></p>
+    <!-- Here p is a Parent tag (Outer)
+         and sup is a Child tag (Inner)
+    -->
+    <p>H2O</p>
+    <p>H<sub>2</sub>O</p>
+
+    <!-- 
+        Semantic Markup : Markup that relates to the meaning of the content
+        1. Meaningful/layout -> Structured
+        2. SEO friendly (Search Engine Optimisation)
+        3. Readable + Screen readers -> UI improve
+
+        Semantic : Jisko dekh kar pta chal jaye ki ismai kaisa content hoga
+        e.g. <p> <h1> <img> <video controls>
+
+            SEMANTIC TAGS: 
+                <header> -> header part
+                <main> -> for the main part of the website (content)
+                <footer> -> for footer
+                <nav> -> Navigation (merko aek webpage se doosre pe jaana hai for relative information)
+                         Isko hum header tag mai daal sakte hai with <ul> and href links
+                <article>
+                <section> -> same as div or span but iske name se iska kaam pta chal jaata hai
+                <aside> -> related links / contents (jo directly nhi indirectly involved hai)
+                           e.g: AVENGERS -> IRON MAN (Related) -> RDJ -> Sherlock homes (here avengers is not directly related to sherlock homes so we can link it in a aside tag)
+        
+        Non Semantic : e.g. <div> <span>
+    -->
+
+    <!-- Html Entities : it is a piece of string that starts with & and ends with ; 
+    Used to display reserved characters (like < and >) and invisible charaters like space(nbsp)
+    can also be used for charaters which are difficult to input with a normal keyboard : browser renders and interprets the correct charaters
+    -->
+    <p>HELLO this is &nbsp; SPACE : non breaking space</p>
+    <p>I cant print " &lt; " and " &gt; " normally with on keyboard as it gives error</p>
+    <p>& and " can also be written using html entities - &amp; and &quot;</p>
+
+    <!-- Emmet (Cheat sheet) -->
+    <!-- Parent Child relation
+            <main>
+                <p>
+                    <ul>
+                        <li>
+                    </ul>
+                </p>
+            </main>
+
+            main>p>ul>li (tags on left side of > is parent and on the right side are child)
+    -->
+    <main>
+        <p>
+            <ul>
+                <li></li>
+            </ul>
+        </p>
+    </main>
+
+
+    <!-- just type p>div -->
+    <p>
+        <div></div>
+    </p>
+
+
+    <!-- ul>li*5 -->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+    <!-- p>div+img (here div and img are siblings) -->
+    <p>
+        <div></div>
+        <img src="" alt="">
+    </p>
+
+    <!-- HTML 5 is not just a version -> new version upgrades + other things that are not a part of HTML 
+    HTML standard - document that tells browser how the html should work
+    
+    How does HTML work?
+    HTML code -> browser -> HTML standard ke according renders the web page 
+    -->
+
+    <!-- video controls likhne se play button etc aa jata hai -->
+    <video controls>
+        <source src="../Penguins.mp4">
+    </video>
+
+    <br>
+
+    <!-- Tables are used to reperesent real life table data -->
+    <!-- tr tag - creates table row -->
+    <!-- td tag - creates table data -->
+    <!-- th tag - creates table header -->
+
+    <!-- <Thead> - to wrap up table header -->
+    <!-- <Tbody> - to wrap up table body -->
+    <!-- <Tfoot> - to wrap up table footer : agar lahi kisi ka sum nikana ho-->
+
+    <!-- Colspan or Rowspan - used to create cells which spans over multiple rows and columns -->
+    <!-- <span> area - 1 row and 1 column -> aek entry kitna area cover karti hai 
+    Colspan = " "
+    Rowspan = " "    
+    -->
+        <table border>
+        <caption>FOOD&nbsp;MENU</caption>
+        <tr>
+            <th rowspan="2">Food</th>
+            <th colspan="2">Cost</th>
+        </tr>
+        <tr>
+            <th>INR</th>
+            <th>USD</th>
+        </tr>
+        <!-- Tr ke andar uss row ka saara data hoga -->
+        <tr>
+            <td>Chips</td>
+            <td>20</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Frooti</td>
+            <td>15</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+<!-- Forms in HTML - used to collect data from the users 
+<form>
+    FORM CONTENT
+</form> 
+-->
+
+<!-- Action attribute : used to define what action needs to performed when a form is submited or where the form data shoul be sent
+<form action ="/action.php"> 
+<form action ="/action.php">
+-->
+
+<form>
+    <!-- input is a single tag : no closing tag is required 
+    used to create multiple form controls
+    there are multiple type of inputs that can be created using type attribute
+    -->
+    <input type=""> <!--Just a text box is created-->
+    <br>
+    <label> <!--Classical approach: Represents a caption for an item in a user interface - it connects input box with its name/text-->
+        Enter your Username:
+        <input type="text" placeholder="Enter text here"> <!--placeholder is the transparent text that appears in the input box-->
+    </label>
+    <br>
+        <label for="Password"> Enter Your Password:  </label>
+        <input type="password" id="Password" placeholder="Enter Password here">
+        <!-- Id is a unique element / name - for and id connect ho jaate hai-->
+    <br>
+    <input type="number">
+    <br>
+    <input type="time">
+    <br>    
+    <input type="color">
+    <br>
+    <input type="date">
+
+    <!-- Button element : <button>Button ke upar jo name display hoga</button> 
+    Submit krne par -> <form action="/server"> yaha jayega webpage
+        
+    Form ke andar button kahi bhi ho sakta hai but wo sirf aek hi kaam krega submit krne ka
+    Form ke bahar if button is present -> no submit action is performed (koi information hi nhi submit krne ko)
+
+    Type attribute nahi specified ho toh buttons are predefined to submit the form , unless specified
+    -->
+    <button type="submit">Submit</button>
+    <button type="button">Do something</button>
+    <button type="reset">Do something</button>
+
+    <!-- Button using input element -->
+    <input type="submit"> <!--By default submit dikhega-->
+    <input type="button" value="Click me"> <!--Just a button-->
+
+    <!-- Name attribute : hume ye pta chal jaata hai ki uss box mai kya value input hui thi corresponding to that name -> name-value pair ki tarah submit hoga -->
+    <input type="text" placeholder="Entername" id="username" name="username">
+    <input type="submit">
+    <!-- Username:abcd 
+         Submit
+    //Server?username=abcd -> ye url ke sath pass hota hai and bohot jagah jaata hai -> if password then sensitive and cant risk
+    -->
+
+    <!-- Checkbox - multiple mai kitne bhi choose kr sakte hai  
+    Checked -> agar hume checkbox by default checked chahie ho 
+    -->
+    <input type="checkbox" name="age" id="age" checked/>
+    <label for="age">I am 18+</label>
+    <!-- Agar hamara checkboc tick hai tabhi information pass hogi nhi toh nahi hogi (url mai) - on likha hota hai
+    Agar checkbox ko group krna ho toh name="" same rakhna hota 
+    -->
+
+    <!-- Radio button - multiple mai aek hi select hota hai -->
+    <input type="radio" id="apple" name="fruit" value="apple"/>
+    <label for="apple">Apple</label>
+    <!-- Radio attribute mai name attribute same hona chahiye nahi to multiple select ho sakte hai 
+    
+    Isko submit krne se -> if apple wala radio button is selected then: Server?fruit=ON
+    if banana is selected then: Server?fruit=ON
+
+    URL MAI NAHI PTA CHAL RHA KI KONSA ATTRIBUTE ON HAI -> for that we use value attribute -> Server?fruit=apple
+    -->
+
+    <!-- Dropdown element -->
+    <select name="profession" id="profession">
+        <option>Choose option</option> <!--This is selected by default if kisi or option mai "selected" na likha ho-->
+        <option value="student" selected>Student</option>
+        <option value="developer">Developer</option>
+    </select>
+
+    <!-- Range -->
+    <label for="volume">Volume</label>
+    <input type="Range" min="0" max="100" name="vol" step="10" value="70"/>
+    <!-- if we specify step="10" -> toh wo 10 ke steps mai badhega
+    if we specify value="70" -> already itna set hoga -> usko change krlo
+    -->
+
+    <!-- Text area element -->
+    <label for="feedback">Please provide your valuable feedback! Thankyou</label>
+    <textarea id="feedback" placeholder="feedback" name="feedback"></textarea>
+    <!-- Size by default is 2 row and 10 column -> change bhi kr sakte hai
+    <textarea id="feedback" rows="5" columns="100"> 
+    -->
+
+</form>
+
+<!-- Connects two webpages -->
+<form action="https://youtube.com/results">
+    <input type="text" placeholder="search in youtube" name="search_query">
+    <button>Submit</button>
+</form>
+<!-- youtube ke url mai aise search hoga: https://youtube.com/results"?"search_query"=jo bhi cheez hum input krenge wo" -->
+
+<!-- google.com/search?q=water
+     google.com/search?q=apple
+jo hum search krte hai wo = ke baad wali place mai change ho rha hai 
+-->
+<form action="https://www.google.com/search">
+    <input type="text" placeholder="enter to search anything you want to in google" name="q">
+    <button>Submit</button>
+</form>
+
+
+</body>
+</html>
